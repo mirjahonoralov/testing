@@ -6,10 +6,8 @@ import MiniCard from "./MiniCard";
 import BigCard from "./BigCard";
 import { silkRoad } from "../../../store/data/CountriesData";
 
-const Content = ({ regionPlaces, content }) => {
-  // const { content, regions, places, regionPlaces } = useSelector(
-  //   (state) => state.main
-  // );
+const Content = () => {
+  const { content, regionPlaces } = useSelector((state) => state.main);
 
   console.log(regionPlaces);
   return (
