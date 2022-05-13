@@ -1,16 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CountriesData } from "../data/CountriesData";
 
 const initialState = {
-  countriesData: CountriesData,
   regions: [],
   regionPlaces: [],
   allPlaces: [],
   places: [],
-  content: [],
+  content: {},
 };
-
-console.log(CountriesData);
 
 export const mainSlice = createSlice({
   name: "main",

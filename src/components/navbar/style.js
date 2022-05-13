@@ -1,16 +1,11 @@
 import styled from "styled-components";
 import bgImg from "../../assets/bg.jpg";
 
-export const Nav = styled.div`
-  width: 100vw;
-  height: 500px;
-  /* background-image: url(${bgImg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+export const Wrapper = styled.div`
+  height: 18vh;
 `;
 
-export const Wrapper = styled.div`
+export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

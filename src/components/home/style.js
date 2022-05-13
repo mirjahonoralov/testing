@@ -9,14 +9,17 @@ export const HomePageWrapper = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  margin: 40px 0;
+  height: 75vh;
+  overflow-y: scroll;
+
   img {
-    width: 100%;
+    width: 40%;
   }
 `;
 
 export const LeftWrapper = styled.div`
   width: 30%;
+  height: 75vh;
   border-right: 1px solid silver;
   padding-right: 10px;
 `;
@@ -43,4 +46,5 @@ export const RightWrapper = styled.div`
   border-left: 1px solid silver;
   padding-left: 10px;
   width: 30%;
+  height: 75vh;
 `;

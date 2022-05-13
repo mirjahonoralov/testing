@@ -8,18 +8,18 @@ import { HomePageWrapper } from "../components/home/style";
 // import Navbar from "../components/navbar/Navbar";
 
 const HomePage = () => {
-  const data = useSelector((state) => state);
+  const { content, regions, places, regionPlaces } = useSelector(
+    (state) => state.main
+  );
 
   return (
-    <>
-      <Container>
-        <HomePageWrapper>
-          <LeftSideBar />
-          <Content />
-          <RightSideBar />
-        </HomePageWrapper>
-      </Container>
-    </>
+    <Container>
+      <HomePageWrapper>
+        <LeftSideBar />
+        <Content regionPlaces={regionPlaces} content={content} />
+        <RightSideBar />
+      </HomePageWrapper>
+    </Container>
   );
 };
 

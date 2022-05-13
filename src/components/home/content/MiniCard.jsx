@@ -2,7 +2,6 @@ import React from "react";
 import { MiniCardWrapper } from "./style";
 
 const MiniCard = ({ data }) => {
-  console.log(data);
   return (
     <MiniCardWrapper>
       <img src={data.img} alt="no img" />

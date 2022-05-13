@@ -1,27 +1,26 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import silkRoadImg from "../../../assets/silkroad-tours.png";
 import { Container } from "../../Container";
 import { Wrapper } from "../style";
 import MiniCard from "./MiniCard";
+import BigCard from "./BigCard";
+import { silkRoad } from "../../../store/data/CountriesData";
 
-const Content = () => {
-  const { content, regions, places, regionPlaces } = useSelector(
-    (state) => state.main
-  );
-  console.log(places, regionPlaces);
+const Content = ({ regionPlaces, content }) => {
+  // const { content, regions, places, regionPlaces } = useSelector(
+  //   (state) => state.main
+  // );
 
+  console.log(regionPlaces);
   return (
     <Wrapper>
       <Container>
-        {/* <MiniCard /> */}
-        {regionPlaces.length ? (
+        {regionPlaces.length && !content[0] ? (
           regionPlaces.map((place, id) => <MiniCard key={id} data={place} />)
+        ) : content[0]?.name.length > 0 ? (
+          <BigCard data={content[0]} />
         ) : (
-          <div>
-            <img src={silkRoadImg} alt="silkRoadImg" />
-            <p>text</p>
-          </div>
+          <BigCard data={silkRoad} />
         )}
       </Container>
     </Wrapper>

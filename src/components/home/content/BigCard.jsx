@@ -1,12 +1,14 @@
 import React from "react";
+import { BigCardWrapper } from "./style";
 
-const BigCard = () => {
+const BigCard = ({ data }) => {
   return (
-    <div>
-      <img src="" alt="no img" />
-      <p>short</p>
-      <p>long</p>
-    </div>
+    <BigCardWrapper>
+      <img src={data.img} alt="no img" />
+      <h1>{data.name}</h1>
+      <p>{data.short}</p>
+      <p>{data.more}</p>
+    </BigCardWrapper>
   );
 };
 
